@@ -49,6 +49,6 @@ public class BouncePad : MonoBehaviour
 
     private void Bounce()
     {
-       rb.velocity = new Vector2(rb.velocity.x, bounceForce);
+       rb.velocity = new Vector2(0, bounceForce);
     }
 }
