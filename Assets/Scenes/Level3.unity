@@ -10932,9 +10932,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9d997226d6a8742afa96b4263ccf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 1932422271}
   player: {fileID: 1932422268}
   bounceCheck: {fileID: 2071301571}
   bounceWallCheck: {fileID: 372872833}
+  bounceLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  bounceForce: 8
 --- !u!1 &1543621250
 GameObject:
   m_ObjectHideFlags: 0
@@ -11493,12 +11498,15 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  coyoteTime: 5
+  coyoteTimeCounter: 0
   wallCheck: {fileID: 372872833}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
   canDash: 1
   isDashing: 0
+  hasJump: 0
   particles: {fileID: 970622078}
 --- !u!212 &1932422272
 SpriteRenderer:

@@ -27,8 +27,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
     private bool isGrounded;
-    private float coyoteTime = 5f;
-    private float coyoteTimeCounter;
+    public float coyoteTime = 5f;
+    public float coyoteTimeCounter;
     [SerializeField]
     private Transform wallCheck;
     [SerializeField]
@@ -43,7 +43,7 @@ public class PlayerManager : MonoBehaviour
     private Vector2 wallJumpingPower = new Vector2(7f, 10f);
     public bool canDash = true;
     public bool isDashing;
-    private bool hasJump;
+    public bool hasJump;
     private float dashForce = 24f;
     private float dashTime = 0.15f;
     private float dashCD = 0.7f;
