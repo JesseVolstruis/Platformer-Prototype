@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
-    public GameObject[] textArray = new GameObject[100];
+    public GameObject[] textArray = new GameObject[10];
     // Start is called before the first frame update
     void Start()
     {
