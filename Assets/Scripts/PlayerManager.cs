@@ -75,8 +75,7 @@ public class PlayerManager : MonoBehaviour
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
-       
-       
+
         if (isDashing)
         {
             return;
@@ -214,6 +213,8 @@ public class PlayerManager : MonoBehaviour
             rb.velocity = new Vector2 (currentVelocity, 0);
             rb.velocity += Vector2.up * jumpForce;
             isGrounded = false;
+            coyoteTimeCounter = 0f;
+            hasJump = false;
             Invoke(nameof(JumpColor), 0.1f );
             
         }

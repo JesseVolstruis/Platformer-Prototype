@@ -36,10 +36,7 @@ public class BouncePad : MonoBehaviour
             playerManager.hasJump = true;
             Bounce();
         }
-        else
-        {
-            playerManager.coyoteTimeCounter -= Time.deltaTime;
-        }
+       
     }
 
     private bool isBounced()
