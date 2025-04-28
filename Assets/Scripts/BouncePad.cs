@@ -20,6 +20,8 @@ public class BouncePad : MonoBehaviour
     private LayerMask bounceWallLayer;
     [SerializeField]
     private float bounceForce;
+    [SerializeField]
+    private float direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,7 +71,7 @@ public class BouncePad : MonoBehaviour
     private void WallBounce()
     {
         playerManager.canDash = true;
-        rb.velocity = new Vector2(Vector2.right.x*15f, 5);
+        rb.velocity = new Vector2(direction*15f, 5);
         Invoke(nameof(StopWallBouncing), 0.35f);
     }
 
