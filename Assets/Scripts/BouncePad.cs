@@ -14,6 +14,8 @@ public class BouncePad : MonoBehaviour
     [SerializeField]
     private Transform bounceCheck;
     [SerializeField]
+    private Transform backCheck;
+    [SerializeField]
     private Transform bounceWallCheck;
     [SerializeField]
     private LayerMask bounceLayer;
@@ -42,7 +44,7 @@ public class BouncePad : MonoBehaviour
             Bounce();
         }
 
-        if(isWallBounced())
+        if(isWallBounced() || Physics2D.OverlapCircle(backCheck.position, 0.2f, bounceWallLayer))
         {
             playerManager.coyoteTimeCounter = playerManager.coyoteTime;
             playerManager.canDash = true;
@@ -52,7 +54,7 @@ public class BouncePad : MonoBehaviour
             WallBounce();
         }
 
-        if (isWallBouncedLeft())
+        if (isWallBouncedLeft() || Physics2D.OverlapCircle(backCheck.position, 0.2f, bounceWallLayerLeft))
         {
             playerManager.coyoteTimeCounter = playerManager.coyoteTime;
             playerManager.canDash = true;
@@ -93,7 +95,6 @@ public class BouncePad : MonoBehaviour
     {
         playerManager.canDash = true;
             rb.velocity = new Vector2(Vector2.right.x * 15f, 5);
-        Debug.Log("Right");
         Invoke(nameof(StopWallBouncing), 0.35f);
     }
 
@@ -101,7 +102,6 @@ public class BouncePad : MonoBehaviour
     {
         playerManager.canDash = true;
         rb.velocity = new Vector2(Vector2.left.x * 15f, 5);
-        Debug.Log("Left");
         Invoke(nameof(StopWallBouncing), 0.35f);
     }
 
