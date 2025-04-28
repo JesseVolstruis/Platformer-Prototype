@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
     private Transform wallCheck;
     [SerializeField]
     private LayerMask wallLayer;
-    private float slideSpeed = 2f;
+    public float slideSpeed = 2f;
     private bool isWallSliding;
     private bool isWallJumping;
     private float wallJumpingDirection;

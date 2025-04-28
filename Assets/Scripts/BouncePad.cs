@@ -36,6 +36,15 @@ public class BouncePad : MonoBehaviour
             playerManager.hasJump = true;
             Bounce();
         }
+
+        if(isWallBounced())
+        {
+            playerManager.coyoteTimeCounter = playerManager.coyoteTime;
+            playerManager.canDash = true;
+            sprite.color = new Color32(255, 255, 255, 255);
+            playerManager.hasJump = true;
+            WallBounce();
+        }
        
     }
 
@@ -44,8 +53,18 @@ public class BouncePad : MonoBehaviour
         return Physics2D.OverlapCircle(bounceCheck.position, 0.2f, bounceLayer);
     }
 
+    private bool isWallBounced()
+    {
+        return Physics2D.OverlapCircle(bounceWallCheck.position, 0.2f, bounceLayer);
+    }
+
     private void Bounce()
     {
        rb.velocity = new Vector2(0, bounceForce);
+    }
+
+    private void WallBounce()
+    {
+        rb.velocity = new Vector2(Vector2.right.x*10f, 0);
     }
 }
