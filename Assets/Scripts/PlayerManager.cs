@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
     private bool isGrounded;
-    public float coyoteTime = 5f;
+    public float coyoteTime = 10f;
     public float coyoteTimeCounter;
     [SerializeField]
     private Transform wallCheck;
@@ -288,7 +288,7 @@ public class PlayerManager : MonoBehaviour
             }
             else if (!isGrounded)
             {
-                float targetX = 0.3f * rb.velocity.x;
+                float targetX = 0.1f * rb.velocity.x;
                 float newX = Mathf.Lerp(rb.velocity.x, targetX, 0.5f);
                 rb.velocity = new Vector2(newX, rb.velocity.y);
             }
@@ -311,7 +311,7 @@ public class PlayerManager : MonoBehaviour
             }
             else if (!isGrounded)
             {
-                float targetX = 0.3f * rb.velocity.x;
+                float targetX = 0.1f * rb.velocity.x;
                 float newX = Mathf.Lerp(rb.velocity.x, targetX, 0.5f);
                 rb.velocity = new Vector2(newX, rb.velocity.y);
                 
