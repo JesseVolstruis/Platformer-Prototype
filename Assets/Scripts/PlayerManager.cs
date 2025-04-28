@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private LayerMask wallLayer;
     public float slideSpeed = 2f;
-    private bool isWallSliding;
+    public bool isWallSliding;
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
@@ -50,7 +50,8 @@ public class PlayerManager : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField]
     private GameObject particles;
-    
+    public bool isWallBoucning;
+
 
     // Start is called before the first frame update
     void Start()
@@ -81,7 +82,13 @@ public class PlayerManager : MonoBehaviour
             return;
         }
 
-        if(!sprite.enabled)
+        if(isWallBoucning)
+        {
+            return;
+        }
+
+
+        if (!sprite.enabled)
         {
             return;
         }

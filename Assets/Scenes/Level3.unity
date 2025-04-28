@@ -177,6 +177,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &9805903
 Rigidbody2D:
@@ -552,6 +555,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &42676890
 Rigidbody2D:
@@ -2415,6 +2421,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &325891096
 Rigidbody2D:
@@ -4501,6 +4510,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &560778891
 Rigidbody2D:
@@ -18426,6 +18438,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &1222692567
 Rigidbody2D:
@@ -19772,6 +19787,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!1 &1419045659
 GameObject:
@@ -19985,6 +20003,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &1425301991
 Rigidbody2D:
@@ -20514,6 +20535,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &1464261113
 Rigidbody2D:
@@ -20980,6 +21004,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &1554135535
 Rigidbody2D:
@@ -22159,6 +22186,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &1722378955
 Rigidbody2D:
@@ -22525,7 +22555,7 @@ GameObject:
   - component: {fileID: 1804177134}
   - component: {fileID: 1804177133}
   - component: {fileID: 1804177132}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: BouncePad 1 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -22541,7 +22571,7 @@ Transform:
   m_GameObject: {fileID: 1804177130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -7.09, y: 1.97, z: 9.931152}
+  m_LocalPosition: {x: -7.098, y: 1.97, z: 9.931152}
   m_LocalScale: {x: 1.5105116, y: 0.3733985, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22566,6 +22596,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 512
   bounceForce: 16
 --- !u!50 &1804177133
 Rigidbody2D:
@@ -23244,10 +23277,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   slideSpeed: 2
+  isWallSliding: 0
   canDash: 1
   isDashing: 0
   hasJump: 0
   particles: {fileID: 970622078}
+  isWallBoucning: 0
 --- !u!212 &1932422272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24659,6 +24694,9 @@ MonoBehaviour:
   bounceLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounceWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   bounceForce: 16
 --- !u!50 &2105189163
 Rigidbody2D:

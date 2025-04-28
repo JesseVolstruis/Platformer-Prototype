@@ -17,6 +17,8 @@ public class BouncePad : MonoBehaviour
     [SerializeField]
     private LayerMask bounceLayer;
     [SerializeField]
+    private LayerMask bounceWallLayer;
+    [SerializeField]
     private float bounceForce;
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,7 @@ public class BouncePad : MonoBehaviour
             playerManager.canDash = true;
             sprite.color = new Color32(255, 255, 255, 255);
             playerManager.hasJump = true;
+            playerManager.isWallBoucning = true;
             WallBounce();
         }
        
@@ -55,7 +58,7 @@ public class BouncePad : MonoBehaviour
 
     private bool isWallBounced()
     {
-        return Physics2D.OverlapCircle(bounceWallCheck.position, 0.2f, bounceLayer);
+        return Physics2D.OverlapCircle(bounceWallCheck.position, 0.2f, bounceWallLayer);
     }
 
     private void Bounce()
@@ -65,6 +68,12 @@ public class BouncePad : MonoBehaviour
 
     private void WallBounce()
     {
-        rb.velocity = new Vector2(Vector2.right.x*10f, 0);
+        rb.velocity = new Vector2(Vector2.right.x*15f, 5);
+        Invoke(nameof(StopWallBouncing), 0.35f);
+    }
+
+    private void StopWallBouncing()
+    {
+        playerManager.isWallBoucning=false;
     }
 }
