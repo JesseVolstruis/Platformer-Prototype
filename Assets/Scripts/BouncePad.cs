@@ -68,6 +68,7 @@ public class BouncePad : MonoBehaviour
 
     private void WallBounce()
     {
+        playerManager.canDash = true;
         rb.velocity = new Vector2(Vector2.right.x*15f, 5);
         Invoke(nameof(StopWallBouncing), 0.35f);
     }

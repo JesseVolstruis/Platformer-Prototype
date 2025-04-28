@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
     public bool hasJump;
     private float dashForce = 24f;
     private float dashTime = 0.15f;
-    private float dashCD = 0.7f;
+    private float dashCD = 0.2f;
     private SpriteRenderer sprite;
     [SerializeField]
     private GameObject particles;
@@ -110,10 +110,10 @@ public class PlayerManager : MonoBehaviour
         {
             StartCoroutine(RightDash());
         }
-       /* else if (Input.GetKeyDown(KeyCode.RightShift) && canDash)
+        else if (Input.GetKeyDown(KeyCode.RightShift) && canDash)
         {
             StartCoroutine(RightDash());
-        }*/
+        }
 
         if (!isWallJumping)
         {
@@ -349,13 +349,19 @@ public class PlayerManager : MonoBehaviour
             yield return new WaitForSeconds(dashTime);
             rb.gravityScale= originalGravity;
             isDashing = false;
+            if(isWallBoucning)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        }
+            else
+        {
             rb.velocity = new Vector2(0, rb.velocity.y);
-        yield return new WaitForSeconds(dashCD);
-            //canDash = true;
-            if (!isMoving)
+        }
+            yield return new WaitForSeconds(dashCD);
+        /*if (!isMoving)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
-            }
+            }*/
            
         
     }
@@ -370,9 +376,15 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = originalGravity;
         isDashing = false;
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        if (isWallBoucning)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
         yield return new WaitForSeconds(dashCD);
-        //canDash = true;
     }
 
 
