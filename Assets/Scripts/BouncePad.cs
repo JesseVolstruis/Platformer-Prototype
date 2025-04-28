@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class BouncePad : MonoBehaviour
@@ -19,9 +20,9 @@ public class BouncePad : MonoBehaviour
     [SerializeField]
     private LayerMask bounceWallLayer;
     [SerializeField]
-    private float bounceForce;
+    private LayerMask bounceWallLayerLeft;
     [SerializeField]
-    private float direction;
+    private float bounceForce; 
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,21 @@ public class BouncePad : MonoBehaviour
             playerManager.isWallBoucning = true;
             WallBounce();
         }
-       
+
+        if (isWallBouncedLeft())
+        {
+            playerManager.coyoteTimeCounter = playerManager.coyoteTime;
+            playerManager.canDash = true;
+            sprite.color = new Color32(255, 255, 255, 255);
+            playerManager.hasJump = true;
+            playerManager.isWallBoucning = true;
+            WallBounceLeft();
+        }
+
+
+
+
+
     }
 
     private bool isBounced()
@@ -63,6 +78,12 @@ public class BouncePad : MonoBehaviour
         return Physics2D.OverlapCircle(bounceWallCheck.position, 0.2f, bounceWallLayer);
     }
 
+    private bool isWallBouncedLeft()
+    {
+        return Physics2D.OverlapCircle(bounceWallCheck.position, 0.2f, bounceWallLayerLeft);
+    }
+
+
     private void Bounce()
     {
        rb.velocity = new Vector2(0, bounceForce);
@@ -71,7 +92,16 @@ public class BouncePad : MonoBehaviour
     private void WallBounce()
     {
         playerManager.canDash = true;
-        rb.velocity = new Vector2(direction*15f, 5);
+            rb.velocity = new Vector2(Vector2.right.x * 15f, 5);
+        Debug.Log("Right");
+        Invoke(nameof(StopWallBouncing), 0.35f);
+    }
+
+    private void WallBounceLeft()
+    {
+        playerManager.canDash = true;
+        rb.velocity = new Vector2(Vector2.left.x * 15f, 5);
+        Debug.Log("Left");
         Invoke(nameof(StopWallBouncing), 0.35f);
     }
 
