@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -24,7 +25,8 @@ public class BouncePad : MonoBehaviour
     [SerializeField]
     private LayerMask bounceWallLayerLeft;
     [SerializeField]
-    private float bounceForce; 
+    private float bounceForce;
+    public static event Action <Vector3> onBounce;
     // Start is called before the first frame update
     void Start()
     {
@@ -88,7 +90,8 @@ public class BouncePad : MonoBehaviour
 
     private void Bounce()
     {
-       rb.velocity = new Vector2(0, bounceForce);
+        rb.velocity = new Vector2(0, bounceForce);
+        onBounce(bounceCheck.transform.position);
     }
 
     private void WallBounce()
