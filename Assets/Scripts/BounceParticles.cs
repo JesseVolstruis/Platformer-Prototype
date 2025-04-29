@@ -27,9 +27,10 @@ public class BounceParticles : MonoBehaviour
         BouncePad.onBounce -= Teleport;
     }
 
-    void Teleport(Vector3 pos)
+    void Teleport(Vector3 pos, Vector3 angle)
     {
         transform.position = pos;
+        transform.eulerAngles = angle;
         particles.Emit(1);
     }
 }

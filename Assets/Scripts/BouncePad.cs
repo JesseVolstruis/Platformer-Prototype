@@ -26,7 +26,7 @@ public class BouncePad : MonoBehaviour
     private LayerMask bounceWallLayerLeft;
     [SerializeField]
     private float bounceForce;
-    public static event Action <Vector3> onBounce;
+    public static event Action <Vector3,Vector3> onBounce;
     // Start is called before the first frame update
     void Start()
     {
@@ -91,13 +91,14 @@ public class BouncePad : MonoBehaviour
     private void Bounce()
     {
         rb.velocity = new Vector2(0, bounceForce);
-        onBounce(bounceCheck.transform.position);
+        onBounce(bounceCheck.transform.position,transform.eulerAngles);
     }
 
     private void WallBounce()
     {
         playerManager.canDash = true;
-            rb.velocity = new Vector2(Vector2.right.x * 15f, 5);
+        rb.velocity = new Vector2(Vector2.right.x * 15f, 5);
+        onBounce(bounceWallCheck.transform.position, transform.eulerAngles);
         Invoke(nameof(StopWallBouncing), 0.35f);
     }
 
@@ -105,6 +106,7 @@ public class BouncePad : MonoBehaviour
     {
         playerManager.canDash = true;
         rb.velocity = new Vector2(Vector2.left.x * 15f, 5);
+        onBounce(bounceWallCheck.transform.position, transform.eulerAngles);
         Invoke(nameof(StopWallBouncing), 0.35f);
     }
 
