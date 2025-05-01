@@ -72,6 +72,10 @@ public class PlayerManager : MonoBehaviour
             sprite.color = new Color32(255, 255, 255, 255);
             hasJump = true;
         }
+        else if (IsWalled())
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
@@ -174,7 +178,7 @@ public class PlayerManager : MonoBehaviour
             wallJumpingCounter -=Time.deltaTime;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && wallJumpingCounter > 0f)
+        if(Input.GetKeyDown(KeyCode.Space) && wallJumpingCounter > 0f && !IsGrounded())
         {
             isWallJumping = true;
             hasJump = false;
