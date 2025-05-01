@@ -351,8 +351,8 @@ RectTransform:
   m_Children:
   - {fileID: 868493212}
   - {fileID: 189151486}
-  - {fileID: 2124741890}
   - {fileID: 1844936041}
+  - {fileID: 2124741890}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 463645276}
   - component: {fileID: 463645275}
   m_Layer: 5
-  m_Name: Select4
+  m_Name: Select3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 934580600}
   - component: {fileID: 934580599}
   m_Layer: 5
-  m_Name: Level 4 Text
+  m_Name: Level 3 Text
   m_TagString: LevelNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1086,7 +1086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2023621, y: 3.3039856}
+  m_AnchoredPosition: {x: 1.21, y: 3.3039856}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934580599
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 4
+  m_text: Level 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 1073649959}
   - component: {fileID: 1073649958}
   m_Layer: 5
-  m_Name: Select3
+  m_Name: Select4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1330,7 +1330,7 @@ GameObject:
   - component: {fileID: 1313763727}
   - component: {fileID: 1313763726}
   m_Layer: 5
-  m_Name: Level 3 Text
+  m_Name: Level 4 Text
   m_TagString: LevelNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1352,7 +1352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2023621, y: 3.3039856}
+  m_AnchoredPosition: {x: 1.23, y: 3.3039856}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313763726
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 3
+  m_text: Level 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 1379706593}
   - component: {fileID: 1379706592}
   m_Layer: 5
-  m_Name: Level 4 name
+  m_Name: Level 3 name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,7 +1798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844936041}
   m_Layer: 0
-  m_Name: Level 4
+  m_Name: Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1813,13 +1813,13 @@ Transform:
   m_GameObject: {fileID: 1844936040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 536, y: 100.167175, z: -10793.295}
+  m_LocalPosition: {x: 77, y: 100.167175, z: -10793.295}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 463645274}
-  - {fileID: 934580598}
   - {fileID: 1379706591}
+  - {fileID: 934580598}
   m_Father: {fileID: 180614682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846324526
@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 1846324529}
   - component: {fileID: 1846324528}
   m_Layer: 5
-  m_Name: Level 3 name
+  m_Name: Level 4 name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2145,7 +2145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124741890}
   m_Layer: 0
-  m_Name: Level 3
+  m_Name: Level 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2160,13 +2160,13 @@ Transform:
   m_GameObject: {fileID: 2124741889}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77, y: 100.167175, z: -10793.295}
+  m_LocalPosition: {x: 536, y: 100.167175, z: -10793.295}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1073649957}
-  - {fileID: 1313763725}
   - {fileID: 1846324527}
+  - {fileID: 1313763725}
   m_Father: {fileID: 180614682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807

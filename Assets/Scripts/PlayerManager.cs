@@ -286,6 +286,12 @@ public class PlayerManager : MonoBehaviour
             SceneManager.LoadScene("Level Select");
 
         }
+        if (collision.gameObject.CompareTag("Victory4"))
+        {
+            PlayerPrefs.SetInt("Level4", 1);
+            SceneManager.LoadScene("Level Select");
+
+        }
 
     }
 

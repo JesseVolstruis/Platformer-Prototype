@@ -12,6 +12,7 @@ TagManager:
   - Victory2
   - Victory3
   - SwitchBlock
+  - Victory4
   layers:
   - Default
   - TransparentFX

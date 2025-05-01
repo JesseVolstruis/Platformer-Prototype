@@ -58,6 +58,10 @@ public class SceneLoader : MonoBehaviour
         {
             textArray[2].GetComponent<TextMeshProUGUI>().color = Color.green;
         }
+        if (PlayerPrefs.GetInt("Level4") == 1)
+        {
+            textArray[3].GetComponent<TextMeshProUGUI>().color = Color.green;
+        }
     }
 
     private void OnDisable()
