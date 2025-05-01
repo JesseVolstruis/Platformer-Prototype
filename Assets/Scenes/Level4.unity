@@ -5140,6 +5140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fcc07ba3fabab40b763a59f59108a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchesActive:
+  - {fileID: 38937885}
+  switchesInactive:
+  - {fileID: 443670495}
+  playerManager: {fileID: 2111681012}
 --- !u!4 &383573428
 Transform:
   m_ObjectHideFlags: 0
