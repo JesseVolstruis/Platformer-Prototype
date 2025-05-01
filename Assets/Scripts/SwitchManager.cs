@@ -27,7 +27,9 @@ public class SwitchManager : MonoBehaviour
 
     bool isJumped()
     {
-        return (playerManager.hasJump && Input.GetKeyDown(KeyCode.Space));
+        return (playerManager.IsGrounded() && Input.GetKeyDown(KeyCode.Space)
+            || playerManager.IsWalled() && Input.GetKeyDown(KeyCode.Space)
+            || Input.GetKeyDown(KeyCode.Space) && playerManager.coyoteTimeCounter > 0);
     }
 
     void ToggleSwitches()
@@ -35,17 +37,20 @@ public class SwitchManager : MonoBehaviour
         foreach (GameObject s in switches)
         {
             SpriteRenderer sprite = s.GetComponent<SpriteRenderer>();
+            Collider2D col = sprite.GetComponent<Collider2D>();
             if(sprite.color.a == 1)
             {
                 Color tmpColor = sprite.color;
                 tmpColor.a = 0.0588f;
                 sprite.color = tmpColor;
+                col.isTrigger = true;
             }
             else
             {
                 Color tmpColor = sprite.color;
                 tmpColor.a = 1;
                 sprite.color = tmpColor;
+                col.isTrigger= false;
             }
         }
         Debug.Log("And jump");
