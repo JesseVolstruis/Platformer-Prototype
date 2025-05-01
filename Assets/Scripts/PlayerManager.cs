@@ -72,7 +72,7 @@ public class PlayerManager : MonoBehaviour
             sprite.color = new Color32(255, 255, 255, 255);
             hasJump = true;
         }
-        else if (IsWalled())
+        else if (IsWalled()) //responsible for retaining air jump when neutral falling off wall
         {
             coyoteTimeCounter = coyoteTime;
         }
