@@ -53,7 +53,7 @@ public class SwitchManager : MonoBehaviour
                 col.enabled = true; 
             }
         }
-        Debug.Log("And jump");
+    
     }
 
 }
