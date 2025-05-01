@@ -43,16 +43,17 @@ public class SwitchManager : MonoBehaviour
                 Color tmpColor = sprite.color;
                 tmpColor.a = 0.0588f;
                 sprite.color = tmpColor;
-                col.isTrigger = true;
+                col.enabled = false;
             }
             else
             {
                 Color tmpColor = sprite.color;
                 tmpColor.a = 1;
                 sprite.color = tmpColor;
-                col.isTrigger= false;
+                col.enabled = true; 
             }
         }
         Debug.Log("And jump");
     }
+
 }
