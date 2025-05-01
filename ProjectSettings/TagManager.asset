@@ -11,6 +11,7 @@ TagManager:
   - LevelNumber
   - Victory2
   - Victory3
+  - SwitchBlock
   layers:
   - Default
   - TransparentFX
