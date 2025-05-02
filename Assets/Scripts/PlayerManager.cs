@@ -57,6 +57,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -89,6 +90,11 @@ public class PlayerManager : MonoBehaviour
         if(isWallBoucning)
         {
             return;
+        }
+
+        if(Time.timeScale != 1)
+        {
+            return ;
         }
 
 

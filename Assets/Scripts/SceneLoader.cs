@@ -10,19 +10,29 @@ public class SceneLoader : MonoBehaviour
     public GameObject[] textArray = new GameObject[10];
     [SerializeField]
     private GameObject pauseMenu;
+    [SerializeField]
+    private GameObject deathCount;
+    [SerializeField]
+    private int count;
     // Start is called before the first frame update
     void Start()
     {
         SceneComplete(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
+        pauseMenu.transform.localScale = Vector3.zero;
+        Time.timeScale = 1;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        DeathCountColor();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
         }
+        deathCount.GetComponent<TextMeshProUGUI>().text = "Deaths: " + count;
     }
     private void Awake()
     {
@@ -37,6 +47,7 @@ public class SceneLoader : MonoBehaviour
         }
         DontDestroyOnLoad(Instance);
         SceneManager.activeSceneChanged += SceneComplete;
+        DeathManager.onDeath += IncrementDeath;
     }
 
     public static void LoadScene(string scene)
@@ -48,6 +59,7 @@ public class SceneLoader : MonoBehaviour
     {
         pauseMenu = GameObject.FindGameObjectWithTag("Pause");
         pauseMenu.transform.localScale = Vector3.zero;
+        deathCount = GameObject.Find("DeathCount");
         if(!SceneManager.GetActiveScene().name.Equals("Level Select")) 
         { 
             return;
@@ -74,6 +86,7 @@ public class SceneLoader : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.activeSceneChanged -= SceneComplete;
+        DeathManager.onDeath -= IncrementDeath;
     }
 
     private void TogglePause()
@@ -81,12 +94,32 @@ public class SceneLoader : MonoBehaviour
         if(pauseMenu.transform.localScale == Vector3.one)
         {
             pauseMenu.transform.localScale = Vector3.zero;
-            Debug.Log("1");
+            Time.timeScale = 1;
         }
         else if (pauseMenu.transform.localScale == Vector3.zero)
         {
             pauseMenu.transform.localScale = Vector3.one;
-            Debug.Log("2");
+            Time.timeScale = 0;
+        }
+    }
+
+    private void IncrementDeath(int i)
+    {
+        count = i;
+    }
+    private void DeathCountColor()
+    {
+        if(count == 0)
+        {
+            deathCount.GetComponent<TextMeshProUGUI>().color = new Color32(232,182,0,255);
+        }
+        else if(count < 30)
+        {
+            deathCount.GetComponent<TextMeshProUGUI>().color = Color.white;
+        }
+        else
+        {
+            deathCount.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
     }
 
