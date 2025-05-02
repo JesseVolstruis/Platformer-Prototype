@@ -8,6 +8,8 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
     public GameObject[] textArray = new GameObject[10];
+    [SerializeField]
+    private GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,10 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
     }
     private void Awake()
     {
@@ -41,6 +46,8 @@ public class SceneLoader : MonoBehaviour
 
     public void SceneComplete(Scene scene1, Scene scene2)
     {
+        pauseMenu = GameObject.FindGameObjectWithTag("Pause");
+        pauseMenu.transform.localScale = Vector3.zero;
         if(!SceneManager.GetActiveScene().name.Equals("Level Select")) 
         { 
             return;
@@ -67,6 +74,20 @@ public class SceneLoader : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.activeSceneChanged -= SceneComplete;
+    }
+
+    private void TogglePause()
+    {
+        if(pauseMenu.transform.localScale == Vector3.one)
+        {
+            pauseMenu.transform.localScale = Vector3.zero;
+            Debug.Log("1");
+        }
+        else if (pauseMenu.transform.localScale == Vector3.zero)
+        {
+            pauseMenu.transform.localScale = Vector3.one;
+            Debug.Log("2");
+        }
     }
 
 
