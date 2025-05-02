@@ -25,7 +25,7 @@ public class DeathManager : MonoBehaviour
     private ParticleSystem particles;
     [SerializeField]
     private PlayerManager playerManager;
-    private int deathCount;
+    private static int deathCount = 0;
     public static event Action<int> onDeath;
     public Vector2 respawnPos = new Vector2(-64, -4);
     // Start is called before the first frame update
@@ -33,7 +33,6 @@ public class DeathManager : MonoBehaviour
     {
         sprite =player.GetComponent<SpriteRenderer>();
         rb = player.GetComponent<Rigidbody2D>();
-        deathCount = 0;
     
     }
 
@@ -60,6 +59,7 @@ public class DeathManager : MonoBehaviour
         sprite.enabled = false;
         outline.enabled = false;
         deathCount++;
+        onDeath(deathCount);
         Vector2 currentPosition = rb.transform.position;
         particles.transform.position = currentPosition;
         particles.Emit(10);
@@ -69,7 +69,6 @@ public class DeathManager : MonoBehaviour
         rb.velocity = Vector2.zero;
         sprite.enabled = true;
         outline.enabled = true;
-        onDeath(deathCount);
 
     }
 

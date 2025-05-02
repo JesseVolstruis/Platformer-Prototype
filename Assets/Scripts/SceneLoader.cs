@@ -53,6 +53,12 @@ public class SceneLoader : MonoBehaviour
     public static void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
+        Debug.Log("Loading " + scene);
+    }
+
+    public static void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void SceneComplete(Scene scene1, Scene scene2)
