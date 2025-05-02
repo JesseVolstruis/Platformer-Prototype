@@ -7180,7 +7180,7 @@ GameObject:
   - component: {fileID: 359567036}
   m_Layer: 0
   m_Name: Flag
-  m_TagString: Victory3
+  m_TagString: Victory4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
