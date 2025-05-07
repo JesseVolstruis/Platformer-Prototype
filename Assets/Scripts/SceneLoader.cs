@@ -119,7 +119,7 @@ public class SceneLoader : MonoBehaviour
         {
             deathCount.GetComponent<TextMeshProUGUI>().color = new Color32(232,182,0,255);
         }
-        else if(count < 30)
+        else if(count < 35)
         {
             deathCount.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
