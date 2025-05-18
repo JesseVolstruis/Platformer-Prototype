@@ -15,6 +15,7 @@ public class SceneLoader : MonoBehaviour
     private GameObject deathCount;
     [SerializeField]
     private int count;
+    public int coinCount = 0;
     private int level1Coins;
     private int level2Coins;
     private int level3Coins;
