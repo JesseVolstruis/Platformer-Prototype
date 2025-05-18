@@ -6,6 +6,7 @@ public class CameraSwitcher : MonoBehaviour
 {
     public Camera myCamera;
     public Vector2 respawnPos;
+    CoinManager coinManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,12 @@ public class CameraSwitcher : MonoBehaviour
 
         myCamera.enabled = true;
         SetRespawn();
+        coinManager = FindAnyObjectByType<CoinManager>();
+        if(coinManager.heldCoin != null)
+        {
+            coinManager.CollectCoin(coinManager.heldCoin);
+        }
+        
     }
 
     private void SetRespawn()

@@ -28,6 +28,8 @@ public class DeathManager : MonoBehaviour
     private static int deathCount = 0;
     public static event Action<int> onDeath;
     public Vector2 respawnPos = new Vector2(-64, -4);
+    [SerializeField]
+    private CoinManager coinManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,8 @@ public class DeathManager : MonoBehaviour
         rb.velocity = Vector2.zero;
         sprite.enabled = true;
         outline.enabled = true;
+        coinManager.heldCoin = null;
+        coinManager.RespawnCoins();
 
     }
 

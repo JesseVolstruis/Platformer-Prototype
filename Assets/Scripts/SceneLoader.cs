@@ -8,12 +8,17 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
     public GameObject[] textArray = new GameObject[10];
+    public GameObject[] coinTextArray = new GameObject[10];
     [SerializeField]
     private GameObject pauseMenu;
     [SerializeField]
     private GameObject deathCount;
     [SerializeField]
     private int count;
+    private int level1Coins;
+    private int level2Coins;
+    private int level3Coins;
+    private int level4Coins;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,7 @@ public class SceneLoader : MonoBehaviour
             TogglePause();
         }
         deathCount.GetComponent<TextMeshProUGUI>().text = "Deaths: " + count;
+        TrackCoins();
     }
     private void Awake()
     {
@@ -127,6 +133,20 @@ public class SceneLoader : MonoBehaviour
         {
             deathCount.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
+    }
+
+    private void TrackCoins()
+    {
+        if (!SceneManager.GetActiveScene().name.Equals("Level Select"))
+        {
+            return;
+        }
+        coinTextArray = GameObject.FindGameObjectsWithTag("CoinCount");
+        level1Coins = PlayerPrefs.GetInt("Level1Coins");
+        //level2Coins = PlayerPrefs.GetInt("Level2Coins");
+        //level3Coins = PlayerPrefs.GetInt("Level3Coins");
+        //level4Coins = PlayerPrefs.GetInt("Level4Coins");
+        coinTextArray[0].GetComponent<TextMeshProUGUI>().text = level1Coins +"/2";
     }
 
 

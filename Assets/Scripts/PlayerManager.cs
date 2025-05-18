@@ -51,6 +51,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private GameObject particles;
     public bool isWallBoucning;
+    public string heldCoin;
+    public List<CoinManager> collectedCoins;
 
 
     // Start is called before the first frame update

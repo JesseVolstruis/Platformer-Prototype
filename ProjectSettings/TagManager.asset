@@ -16,6 +16,7 @@ TagManager:
   - Pause
   - DeathManager
   - DeathCount
+  - CoinCount
   layers:
   - Default
   - TransparentFX
