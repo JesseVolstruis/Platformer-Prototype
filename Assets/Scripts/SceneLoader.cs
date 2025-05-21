@@ -144,10 +144,13 @@ public class SceneLoader : MonoBehaviour
         }
         coinTextArray = GameObject.FindGameObjectsWithTag("CoinCount");
         level1Coins = PlayerPrefs.GetInt("Level1Coins");
-        //level2Coins = PlayerPrefs.GetInt("Level2Coins");
-        //level3Coins = PlayerPrefs.GetInt("Level3Coins");
-        //level4Coins = PlayerPrefs.GetInt("Level4Coins");
+        level2Coins = PlayerPrefs.GetInt("Level2Coins");
+        level3Coins = PlayerPrefs.GetInt("Level3Coins");
+        level4Coins = PlayerPrefs.GetInt("Level4Coins");
         coinTextArray[0].GetComponent<TextMeshProUGUI>().text = level1Coins +"/2";
+        coinTextArray[1].GetComponent<TextMeshProUGUI>().text = level2Coins + "/3";
+        coinTextArray[2].GetComponent<TextMeshProUGUI>().text = level3Coins + "/?";
+        coinTextArray[3].GetComponent<TextMeshProUGUI>().text = level4Coins + "/?";
     }
 
 
