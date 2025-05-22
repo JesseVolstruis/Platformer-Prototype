@@ -53,6 +53,7 @@ public class PlayerManager : MonoBehaviour
     public bool isWallBoucning;
     public string heldCoin;
     public List<CoinManager> collectedCoins;
+    CoinManager coinManager;
 
 
     // Start is called before the first frame update
@@ -60,6 +61,7 @@ public class PlayerManager : MonoBehaviour
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
         Time.timeScale = 1;
+        coinManager = FindAnyObjectByType<CoinManager>();
     }
 
     // Update is called once per frame
@@ -292,6 +294,7 @@ public class PlayerManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level3", 1);
             SceneManager.LoadScene("Level Select");
+            coinManager.CollectCoin(coinManager.heldCoin);
 
         }
         if (collision.gameObject.CompareTag("Victory4"))
