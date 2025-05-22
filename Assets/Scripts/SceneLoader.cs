@@ -150,7 +150,7 @@ public class SceneLoader : MonoBehaviour
         coinTextArray[0].GetComponent<TextMeshProUGUI>().text = level1Coins +"/2";
         coinTextArray[1].GetComponent<TextMeshProUGUI>().text = level2Coins + "/3";
         coinTextArray[2].GetComponent<TextMeshProUGUI>().text = level3Coins + "/4";
-        coinTextArray[3].GetComponent<TextMeshProUGUI>().text = level4Coins + "/?";
+        coinTextArray[3].GetComponent<TextMeshProUGUI>().text = level4Coins + "/3";
     }
 
 
