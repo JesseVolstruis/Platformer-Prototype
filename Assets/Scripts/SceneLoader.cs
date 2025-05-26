@@ -20,6 +20,7 @@ public class SceneLoader : MonoBehaviour
     private int level2Coins;
     private int level3Coins;
     private int level4Coins;
+    private int level5Coins;
     // Start is called before the first frame update
     void Start()
     {
@@ -147,10 +148,12 @@ public class SceneLoader : MonoBehaviour
         level2Coins = PlayerPrefs.GetInt("Level2Coins");
         level3Coins = PlayerPrefs.GetInt("Level3Coins");
         level4Coins = PlayerPrefs.GetInt("Level4Coins");
+        level5Coins = PlayerPrefs.GetInt("Level5Coins");
         coinTextArray[0].GetComponent<TextMeshProUGUI>().text = level1Coins +"/2";
         coinTextArray[1].GetComponent<TextMeshProUGUI>().text = level2Coins + "/3";
         coinTextArray[2].GetComponent<TextMeshProUGUI>().text = level3Coins + "/4";
         coinTextArray[3].GetComponent<TextMeshProUGUI>().text = level4Coins + "/3";
+        coinTextArray[4].GetComponent<TextMeshProUGUI>().text = level5Coins + "/3";
     }
 
 
