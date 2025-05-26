@@ -21,15 +21,16 @@ public class SwitchManager : MonoBehaviour
         if (isJumped())
         {
             ToggleSwitches();
+            Debug.Log("Switch now");
         }
         
     }
 
-    bool isJumped()
+     bool isJumped()
     {
-        return (playerManager.IsGrounded() && Input.GetKeyDown(KeyCode.Space)
-            || playerManager.IsWalled() && Input.GetKeyDown(KeyCode.Space)
-            || Input.GetKeyDown(KeyCode.Space) && playerManager.coyoteTimeCounter > 0);
+        return ((playerManager.IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+            || (playerManager.IsWalled() && Input.GetKeyDown(KeyCode.Space))
+            || (Input.GetKeyDown(KeyCode.Space) && playerManager.coyoteTimeCounter > 0));
     }
 
     void ToggleSwitches()
