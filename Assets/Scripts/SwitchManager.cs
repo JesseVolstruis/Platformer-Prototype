@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class SwitchManager : MonoBehaviour
@@ -21,16 +22,19 @@ public class SwitchManager : MonoBehaviour
         if (isJumped())
         {
             ToggleSwitches();
-            Debug.Log("Switch now");
+
         }
-        
+
     }
 
      bool isJumped()
     {
-        return ((playerManager.IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        return (playerManager.IsGrounded() && Input.GetKeyDown(KeyCode.Space))
             || (playerManager.IsWalled() && Input.GetKeyDown(KeyCode.Space))
-            || (Input.GetKeyDown(KeyCode.Space) && playerManager.coyoteTimeCounter > 0));
+            || (Input.GetKeyDown(KeyCode.Space) && playerManager.coyoteTimeCounter > 0);
+
+
+
     }
 
     void ToggleSwitches()
