@@ -147,10 +147,6 @@ public class PlayerManager : MonoBehaviour
 
     public bool IsWalled()
     {
-        if(Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer))
-        {
-            Debug.Log("You are on  a wall");
-        }
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 

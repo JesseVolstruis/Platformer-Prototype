@@ -896,8 +896,8 @@ Transform:
   m_Children:
   - {fileID: 290311273}
   - {fileID: 2089225786}
-  - {fileID: 934580598}
   - {fileID: 1199422944}
+  - {fileID: 528985588}
   m_Father: {fileID: 180614682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202346430
@@ -1669,7 +1669,7 @@ GameObject:
   - component: {fileID: 528985590}
   - component: {fileID: 528985589}
   m_Layer: 5
-  m_Name: Level 5 Text
+  m_Name: Level 3 Text
   m_TagString: LevelNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1683,15 +1683,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528985587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99.93792}
+  m_LocalPosition: {x: 0, y: 0, z: 99.92836}
   m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2124830218}
+  m_Father: {fileID: 189151486}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2161856, y: 3.3039858}
+  m_AnchoredPosition: {x: -0.017407179, y: 1.5781484}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528985589
@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 5
+  m_text: Level 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2145,7 +2145,7 @@ GameObject:
   - component: {fileID: 934580600}
   - component: {fileID: 934580599}
   m_Layer: 5
-  m_Name: Level 3 Text
+  m_Name: Level 4 Text
   m_TagString: LevelNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2159,15 +2159,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934580597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99.92836}
+  m_LocalPosition: {x: 0, y: 0, z: 99.93792}
   m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 189151486}
+  m_Father: {fileID: 1844936041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0071852207, y: 1.5740523}
+  m_AnchoredPosition: {x: 1.2377787, y: 3.3070812}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934580599
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 3
+  m_text: Level 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2679,7 +2679,7 @@ GameObject:
   - component: {fileID: 1313763727}
   - component: {fileID: 1313763726}
   m_Layer: 5
-  m_Name: Level 4 Text
+  m_Name: Level 5 Text
   m_TagString: LevelNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2697,11 +2697,11 @@ RectTransform:
   m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1844936041}
+  m_Father: {fileID: 2124830218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2161856, y: 3.3039858}
+  m_AnchoredPosition: {x: 1.2162223, y: 3.2929182}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313763726
@@ -2724,7 +2724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 4
+  m_text: Level 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3777,8 +3777,8 @@ Transform:
   m_Children:
   - {fileID: 463645274}
   - {fileID: 1379706591}
-  - {fileID: 1313763725}
   - {fileID: 1314475187}
+  - {fileID: 934580598}
   m_Father: {fileID: 180614682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846324526
@@ -4175,8 +4175,8 @@ Transform:
   m_Children:
   - {fileID: 1419741697}
   - {fileID: 759375313}
-  - {fileID: 528985588}
   - {fileID: 1600638820}
+  - {fileID: 1313763725}
   m_Father: {fileID: 180614682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143696649
