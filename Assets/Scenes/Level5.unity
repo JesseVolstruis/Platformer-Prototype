@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1031257076}
-  respawnPos: {x: 45.13, y: 0.69}
+  respawnPos: {x: 63.8, y: 0.76}
 --- !u!61 &29118563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3683,7 +3683,7 @@ Transform:
   m_GameObject: {fileID: 432315986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.62, y: 1.18, z: 0}
+  m_LocalPosition: {x: 65.17, y: 1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
