@@ -95,6 +95,10 @@ public class SceneLoader : MonoBehaviour
         {
             textArray[3].GetComponent<TextMeshProUGUI>().color = Color.green;
         }
+        if (PlayerPrefs.GetInt("Level5") == 1)
+        {
+            textArray[4].GetComponent<TextMeshProUGUI>().color = Color.green;
+        }
     }
 
     private void OnDisable()
@@ -153,7 +157,7 @@ public class SceneLoader : MonoBehaviour
         coinTextArray[1].GetComponent<TextMeshProUGUI>().text = level2Coins + "/3";
         coinTextArray[2].GetComponent<TextMeshProUGUI>().text = level3Coins + "/4";
         coinTextArray[3].GetComponent<TextMeshProUGUI>().text = level4Coins + "/3";
-        coinTextArray[4].GetComponent<TextMeshProUGUI>().text = level5Coins + "/3";
+        coinTextArray[4].GetComponent<TextMeshProUGUI>().text = level5Coins + "/4";
     }
 
 

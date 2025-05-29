@@ -17,6 +17,7 @@ TagManager:
   - DeathManager
   - DeathCount
   - CoinCount
+  - Victory5
   layers:
   - Default
   - TransparentFX
