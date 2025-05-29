@@ -61,7 +61,7 @@ public class DeathManager : MonoBehaviour
         sprite.enabled = false;
         outline.enabled = false;
         deathCount++;
-        onDeath(deathCount);
+        onDeath?.Invoke(deathCount);
         Vector2 currentPosition = rb.transform.position;
         particles.transform.position = currentPosition;
         particles.Emit(10);
