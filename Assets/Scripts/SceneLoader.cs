@@ -8,7 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
     public GameObject[] textArray = new GameObject[10];
-    public GameObject[] coinTextArray = new GameObject[10];
+    public GameObject[] coinTextArray = new GameObject[4];
     [SerializeField]
     private GameObject pauseMenu;
     [SerializeField]
@@ -21,13 +21,17 @@ public class SceneLoader : MonoBehaviour
     private int level3Coins;
     private int level4Coins;
     private int level5Coins;
+    private GameObject level5Object;
+    private GameObject winText;
+    private GameObject winTextCoin;
     // Start is called before the first frame update
     void Start()
     {
+        level5Object = GameObject.Find("Level 5");
         SceneComplete(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
         pauseMenu.transform.localScale = Vector3.zero;
         Time.timeScale = 1;
-        
+
     }
 
     // Update is called once per frame
@@ -98,6 +102,22 @@ public class SceneLoader : MonoBehaviour
         if (PlayerPrefs.GetInt("Level5") == 1)
         {
             textArray[4].GetComponent<TextMeshProUGUI>().color = Color.green;
+            winText = GameObject.Find("Win Text");
+            if (winText != null)
+            { 
+            winText.transform.localScale = Vector3.one;
+            }
+        }
+        if (PlayerPrefs.GetInt("Level1") == 1 &&
+            PlayerPrefs.GetInt("Level2") == 1 &&
+            PlayerPrefs.GetInt("Level3") == 1 &&
+            PlayerPrefs.GetInt("Level4") == 1)
+        {
+            level5Object = GameObject.Find("Level 5");
+            if (level5Object != null)
+            {
+                level5Object.transform.localScale = new Vector3(108, 108, 108);
+            }
         }
     }
 
@@ -158,6 +178,24 @@ public class SceneLoader : MonoBehaviour
         coinTextArray[2].GetComponent<TextMeshProUGUI>().text = level3Coins + "/4";
         coinTextArray[3].GetComponent<TextMeshProUGUI>().text = level4Coins + "/3";
         coinTextArray[4].GetComponent<TextMeshProUGUI>().text = level5Coins + "/4";
+        if (level1Coins +
+            level2Coins +
+            level3Coins +
+            level4Coins +
+            level5Coins == 16)
+        {
+            winTextCoin = GameObject.Find("Win Text (coin)");
+            if (winTextCoin != null)
+            {
+                winTextCoin.transform.localScale = Vector3.one;
+            }
+            textArray[0].GetComponent<TextMeshProUGUI>().color = new Color32(232, 182, 0, 255);
+            textArray[1].GetComponent<TextMeshProUGUI>().color = new Color32(232, 182, 0, 255);
+            textArray[2].GetComponent<TextMeshProUGUI>().color = new Color32(232, 182, 0, 255);
+            textArray[3].GetComponent<TextMeshProUGUI>().color = new Color32(232, 182, 0, 255);
+            textArray[4].GetComponent<TextMeshProUGUI>().color = new Color32(232, 182, 0, 255);
+            winTextCoin.transform.localScale = Vector3.one;
+        }
     }
 
 

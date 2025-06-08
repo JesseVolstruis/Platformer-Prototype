@@ -293,7 +293,10 @@ public class PlayerManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level3", 1);
             SceneManager.LoadScene("Level Select");
-            coinManager.CollectCoin(coinManager.heldCoin);
+            if (coinManager.heldCoin != null)
+            {
+                coinManager.CollectCoin(coinManager.heldCoin);
+            }
 
         }
         if (collision.gameObject.CompareTag("Victory4"))

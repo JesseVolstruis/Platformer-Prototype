@@ -16655,6 +16655,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1894221049}
   respawnPos: {x: -46.3, y: 1.14}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &869676601
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17492,6 +17495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1121825334}
   respawnPos: {x: -64, y: -4}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!1 &1042871942
 GameObject:
   m_ObjectHideFlags: 0
@@ -19950,6 +19956,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1121825334}
   respawnPos: {x: -64, y: -4}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1199237886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21674,6 +21683,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 681312998}
   respawnPos: {x: -8.88, y: -0.24}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1437888924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22057,6 +22069,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 681312998}
   respawnPos: {x: -8.88, y: -0.24}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1462626499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22220,6 +22235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 687506500}
   respawnPos: {x: -27.432, y: -2.114}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1481279648
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23028,6 +23046,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 519420031}
   respawnPos: {x: 9.809, y: -1.46}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1559449494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24900,6 +24921,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1894221049}
   respawnPos: {x: -46.3, y: 1.14}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1684006444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24992,6 +25016,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 687506500}
   respawnPos: {x: -27.432, y: -2.114}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1744024656
 BoxCollider2D:
   m_ObjectHideFlags: 0

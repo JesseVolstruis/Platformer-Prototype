@@ -2113,6 +2113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 318461139}
   respawnPos: {x: 47.42, y: -3.97}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &109451805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4703,6 +4706,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1772144408}
   respawnPos: {x: 104.59, y: -2.94}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &279937262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12075,6 +12081,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 362548961}
   respawnPos: {x: 29.04, y: 3.202}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &459006314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12669,6 +12678,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 362548961}
   respawnPos: {x: 29.04, y: 3.202}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &503845573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12761,6 +12773,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1701940169}
   respawnPos: {x: 10.48, y: -3.94}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &505530819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13201,6 +13216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1316489070}
   respawnPos: {x: -64, y: -4}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &538651733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13372,6 +13390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1701940169}
   respawnPos: {x: 10.48, y: -3.94}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &554893580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14440,6 +14461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 101838286}
   respawnPos: {x: 123.55, y: 0.11}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &616952095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15780,6 +15804,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 830680067}
   respawnPos: {x: -46.73, y: -0.82}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &702719772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16741,6 +16768,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 2072790599}
   respawnPos: {x: -8.94, y: 3.47}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &846520351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18857,6 +18887,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 405734752}
   respawnPos: {x: 86.13, y: -0.26}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &962397614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24290,6 +24323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 841088540}
   respawnPos: {x: 66.96, y: -2.64}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1008427040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34510,6 +34546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 405734752}
   respawnPos: {x: 86.13, y: -0.26}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1351670014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36911,6 +36950,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1772144408}
   respawnPos: {x: 104.59, y: -2.94}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1510864772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37161,6 +37203,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 2072790599}
   respawnPos: {x: -8.94, y: 3.47}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1538801116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38996,6 +39041,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1834409344}
   respawnPos: {x: -27.58, y: -4.014}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1679858937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39088,6 +39136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1834409344}
   respawnPos: {x: -27.58, y: -4.014}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1680979489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39180,6 +39231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 841088540}
   respawnPos: {x: 66.96, y: -2.64}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1693662903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40377,6 +40431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 318461139}
   respawnPos: {x: 47.42, y: -3.97}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1778569948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42150,6 +42207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1316489070}
   respawnPos: {x: -64, y: -4}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &1922870620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44322,6 +44382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 830680067}
   respawnPos: {x: -46.73, y: -0.82}
+  isCamLock: 0
+  isCamLockOff: 0
+  isRespawn: 1
 --- !u!61 &2147147587
 BoxCollider2D:
   m_ObjectHideFlags: 0
