@@ -50,6 +50,8 @@ public class PlayerManager : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField]
     private GameObject particles;
+    [SerializeField]
+    private ParticleSystem jumpParticles;
     public bool isWallBoucning;
     public string heldCoin;
     public List<CoinManager> collectedCoins;
@@ -136,7 +138,7 @@ public class PlayerManager : MonoBehaviour
         WallSlide();
         WallJump();
         Outline();
-        
+       
 
     }
 
@@ -229,6 +231,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (coyoteTimeCounter > 0 && hasJump)
         {
+            PlayJumpParitcle();
             float currentVelocity = rb.velocity.x;
             rb.velocity = new Vector2 (currentVelocity, 0);
             rb.velocity += Vector2.up * jumpForce;
@@ -422,6 +425,14 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(dashCD);
     }
 
+    void PlayJumpParitcle()
+    {
+        if (!isWallJumping && !IsGrounded() && !isWallSliding && !IsWalled())
+        {
+            jumpParticles.transform.position = new Vector3(transform.position.x,transform.position.y - 0.1f, transform.position.z);
+            jumpParticles.Emit(10);
+        }
+    }
 
  
 
