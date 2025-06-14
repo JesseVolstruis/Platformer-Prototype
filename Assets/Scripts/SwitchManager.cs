@@ -21,7 +21,7 @@ public class SwitchManager : MonoBehaviour
     {
         if (isJumped())
         {
-            ToggleSwitches();
+            Invoke(nameof(ToggleSwitches), 0.01f);
 
         }
 
