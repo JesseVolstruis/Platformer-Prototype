@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 318461139}
-  respawnPos: {x: 47.42, y: -3.97}
+  respawnPos: {x: 62.68, y: -2.8}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -4705,7 +4705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1772144408}
-  respawnPos: {x: 104.59, y: -2.94}
+  respawnPos: {x: 119.14, y: -2.48}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -12677,7 +12677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 362548961}
-  respawnPos: {x: 29.04, y: 3.202}
+  respawnPos: {x: 42.27, y: -4.09}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -12772,7 +12772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1701940169}
-  respawnPos: {x: 10.48, y: -3.94}
+  respawnPos: {x: 25.71, y: 3.24}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -15803,7 +15803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 830680067}
-  respawnPos: {x: -46.73, y: -0.82}
+  respawnPos: {x: -31.09, y: -4.04}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -34545,7 +34545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 405734752}
-  respawnPos: {x: 86.13, y: -0.26}
+  respawnPos: {x: 100.41, y: -3.02}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -34581,7 +34581,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23847151, y: -0.10297239}
+  m_Offset: {x: 0.23847151, y: -0.35177857}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34592,7 +34592,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18570614, y: 2.7279365}
+  m_Size: {x: 0.18570614, y: 3.2255487}
   m_EdgeRadius: 0
 --- !u!1 &1356284406
 GameObject:
@@ -37202,7 +37202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 2072790599}
-  respawnPos: {x: -8.94, y: 3.47}
+  respawnPos: {x: 6.82, y: -4.08}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
@@ -39135,7 +39135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 1834409344}
-  respawnPos: {x: -27.58, y: -4.014}
+  respawnPos: {x: -10.8, y: 3.33}
   isCamLock: 0
   isCamLockOff: 0
   isRespawn: 1
