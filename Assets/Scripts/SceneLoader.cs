@@ -31,6 +31,8 @@ public class SceneLoader : MonoBehaviour
         SceneComplete(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
         pauseMenu.transform.localScale = Vector3.zero;
         Time.timeScale = 1;
+        //level5Object = GameObject.Find("Level 5");
+        //level5Object.transform.localScale = new Vector3(108, 108, 108);
 
     }
 
