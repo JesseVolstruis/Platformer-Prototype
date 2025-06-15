@@ -391,6 +391,7 @@ public class PlayerManager : MonoBehaviour
             float originalGravity = rb.gravityScale;
             rb.gravityScale = 0;
             rb.velocity = new Vector2(-1 * dashForce, 0f);
+            playerAnimation.SetTrigger("Dash");
             yield return new WaitForSeconds(dashTime);
             rb.gravityScale= originalGravity;
             isDashing = false;
@@ -418,6 +419,7 @@ public class PlayerManager : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(1 * dashForce, 0f);
+        playerAnimation.SetTrigger("Dash");
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = originalGravity;
         isDashing = false;
