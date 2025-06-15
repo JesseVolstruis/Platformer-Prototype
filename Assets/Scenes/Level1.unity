@@ -8506,6 +8506,7 @@ MonoBehaviour:
   isWallBoucning: 0
   heldCoin: 
   collectedCoins: []
+  jumpSound: {fileID: 8300000, guid: ac633b9006bb1e248b9a862c11934187, type: 3}
 --- !u!61 &493733934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21000,6 +21001,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334184199}
   m_CullTransparentMesh: 1
+--- !u!1 &1357194205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357194207}
+  - component: {fileID: 1357194206}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1357194206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357194205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8604700479ef24295b735002f6d9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxObject: {fileID: 3388276993977275123, guid: f0343dac73879ad4ab6d25b68a936e61, type: 3}
+--- !u!4 &1357194207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357194205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.371178, y: -2.6628127, z: -0.03177295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398207144
 GameObject:
   m_ObjectHideFlags: 0
@@ -24120,6 +24166,7 @@ MonoBehaviour:
   playerManager: {fileID: 493733932}
   respawnPos: {x: -64, y: -4}
   coinManager: {fileID: 167170917}
+  deathSound: {fileID: 8300000, guid: b56f624159c2e8449902f88d04f31f4c, type: 3}
 --- !u!4 &1622252786
 Transform:
   m_ObjectHideFlags: 0
@@ -32815,3 +32862,4 @@ SceneRoots:
   - {fileID: 740206697}
   - {fileID: 167170918}
   - {fileID: 1995783283}
+  - {fileID: 1357194207}

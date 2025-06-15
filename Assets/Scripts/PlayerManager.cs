@@ -58,6 +58,8 @@ public class PlayerManager : MonoBehaviour
     public List<CoinManager> collectedCoins;
     CoinManager coinManager;
     private Animator playerAnimation;
+    [SerializeField]
+    private AudioClip jumpSound;
 
 
     // Start is called before the first frame update
@@ -201,6 +203,7 @@ public class PlayerManager : MonoBehaviour
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
             sprite.color = new Color32(128, 128, 128, 255);
+            PlayJumpSound();
             PlayWallJumpAnimation();
 
             if (transform.localScale.x != wallJumpingDirection)
@@ -244,6 +247,7 @@ public class PlayerManager : MonoBehaviour
             isGrounded = false;
             coyoteTimeCounter = 0f;
             hasJump = false;
+            PlayJumpSound();
             Invoke(nameof(JumpColor), 0.1f );
             Invoke(nameof(PlayJumpAnimation), 0.1f);
 
@@ -459,7 +463,23 @@ public class PlayerManager : MonoBehaviour
         playerAnimation.SetBool("Grounded", false);
     }
 
-
+    void PlayJumpSound()
+    {
+        if (isWallJumping && IsWalled())
+        {
+            SFXManager.instance.PlayClip(jumpSound, transform, 0.3f);
+        }
+        else if (IsGrounded() && !isWallJumping)
+        { 
+            SFXManager.instance.PlayClip(jumpSound, transform, 0.3f);
+        }
+        else if(!IsGrounded() && !isWallJumping && !IsWalled())
+        {
+            SFXManager.instance.PlayClip(jumpSound, transform, 0.3f);
+        }
+        
+        
+    }
 
 
 

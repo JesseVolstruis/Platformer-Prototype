@@ -31,6 +31,8 @@ public class DeathManager : MonoBehaviour
     public Vector2 respawnPos = new Vector2(-64, -4);
     [SerializeField]
     private CoinManager coinManager;
+    [SerializeField]
+    private AudioClip deathSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +65,7 @@ public class DeathManager : MonoBehaviour
         outline.enabled = false;
         deathCount++;
         onDeath?.Invoke(deathCount);
+        SFXManager.instance.PlayClip(deathSound, playerManager.transform, 0.5f);
         Vector2 currentPosition = rb.transform.position;
         particles.transform.position = currentPosition;
         particles.Emit(10);
