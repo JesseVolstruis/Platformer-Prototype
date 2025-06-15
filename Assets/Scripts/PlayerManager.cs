@@ -56,6 +56,7 @@ public class PlayerManager : MonoBehaviour
     public string heldCoin;
     public List<CoinManager> collectedCoins;
     CoinManager coinManager;
+    private Animator playerAnimation;
 
 
     // Start is called before the first frame update
@@ -64,6 +65,7 @@ public class PlayerManager : MonoBehaviour
         sprite = gameObject.GetComponent<SpriteRenderer>();
         Time.timeScale = 1;
         coinManager = FindAnyObjectByType<CoinManager>();
+        playerAnimation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -78,6 +80,7 @@ public class PlayerManager : MonoBehaviour
             canDash = true;
             sprite.color = new Color32(255, 255, 255, 255);
             hasJump = true;
+            playerAnimation.SetBool("Grounded", true);
         }
         else if (IsWalled())
         {
@@ -246,6 +249,8 @@ public class PlayerManager : MonoBehaviour
     private void JumpColor()
     {
         sprite.color = new Color32(128, 128, 128, 255);
+        playerAnimation.SetTrigger("Jump");
+        playerAnimation.SetBool("Grounded", false);
     }
 
 
