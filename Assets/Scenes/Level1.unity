@@ -8490,6 +8490,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  bouncePadLayer:
+    serializedVersion: 2
+    m_Bits: 0
   coyoteTime: 10
   coyoteTimeCounter: 0
   wallCheck: {fileID: 558175963}
@@ -8509,7 +8512,7 @@ MonoBehaviour:
   collectedCoins: []
   jumpSound: {fileID: 8300000, guid: ac633b9006bb1e248b9a862c11934187, type: 3}
   dashSound: {fileID: 8300000, guid: f72b145645795d04fb8942a7c1526fd4, type: 3}
-  WinSound: {fileID: 8300000, guid: 465fffd8678d09d449634701528a9082, type: 3}
+  bounceSound: {fileID: 8300000, guid: c00847f38c62b334d8df8fa182002ca5, type: 3}
 --- !u!61 &493733934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21034,6 +21037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxObject: {fileID: 3388276993977275123, guid: f0343dac73879ad4ab6d25b68a936e61, type: 3}
+  clipCooldown: 0.1
 --- !u!4 &1357194207
 Transform:
   m_ObjectHideFlags: 0

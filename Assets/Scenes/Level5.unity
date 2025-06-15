@@ -3338,6 +3338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switches: []
   playerManager: {fileID: 432315989}
+  switchSound: {fileID: 8300000, guid: ee70086ee05e00941a4e9d8e047d685f, type: 3}
 --- !u!4 &308311050
 Transform:
   m_ObjectHideFlags: 0
@@ -5497,6 +5498,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  bouncePadLayer:
+    serializedVersion: 2
+    m_Bits: 0
   coyoteTime: 10
   coyoteTimeCounter: 0
   wallCheck: {fileID: 210573171}
@@ -5514,6 +5518,9 @@ MonoBehaviour:
   isWallBoucning: 0
   heldCoin: 
   collectedCoins: []
+  jumpSound: {fileID: 8300000, guid: ac633b9006bb1e248b9a862c11934187, type: 3}
+  dashSound: {fileID: 8300000, guid: f72b145645795d04fb8942a7c1526fd4, type: 3}
+  bounceSound: {fileID: 8300000, guid: c00847f38c62b334d8df8fa182002ca5, type: 3}
 --- !u!4 &432315991
 Transform:
   m_ObjectHideFlags: 0
@@ -19695,6 +19702,7 @@ MonoBehaviour:
   playerManager: {fileID: 432315989}
   respawnPos: {x: -64, y: -4}
   coinManager: {fileID: 1360165544}
+  deathSound: {fileID: 8300000, guid: b56f624159c2e8449902f88d04f31f4c, type: 3}
 --- !u!4 &776206641
 Transform:
   m_ObjectHideFlags: 0
@@ -29434,6 +29442,7 @@ MonoBehaviour:
   - {fileID: 1112494082}
   - {fileID: 1950307078}
   levelTitle: Level5Coins
+  coinSound: {fileID: 8300000, guid: e22d693373f1310499c49ffbecc18dd5, type: 3}
 --- !u!4 &1360165545
 Transform:
   m_ObjectHideFlags: 0
@@ -49346,6 +49355,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1970106131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970106133}
+  - component: {fileID: 1970106132}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1970106132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970106131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8604700479ef24295b735002f6d9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxObject: {fileID: 3388276993977275123, guid: f0343dac73879ad4ab6d25b68a936e61, type: 3}
+  clipCooldown: 0.1
+--- !u!4 &1970106133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970106131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.371178, y: -2.6628127, z: -0.03177295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977668228
 GameObject:
   m_ObjectHideFlags: 0
@@ -52473,3 +52528,4 @@ SceneRoots:
   - {fileID: 1360165545}
   - {fileID: 308311050}
   - {fileID: 1949655443}
+  - {fileID: 1970106133}

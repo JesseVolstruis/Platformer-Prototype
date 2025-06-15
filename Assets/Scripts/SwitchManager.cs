@@ -10,6 +10,8 @@ public class SwitchManager : MonoBehaviour
     private GameObject[] switches;
     [SerializeField]
     private PlayerManager playerManager;
+    [SerializeField]
+    private AudioClip switchSound;
     void Start()
     {
         switches = GameObject.FindGameObjectsWithTag("SwitchBlock");

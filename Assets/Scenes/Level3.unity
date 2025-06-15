@@ -6806,6 +6806,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4519294591869087835, guid: d9582a35da64c814db6b8949d89341c6, type: 3}
   m_PrefabInstance: {fileID: 758579856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &766393595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766393597}
+  - component: {fileID: 766393596}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &766393596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766393595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8604700479ef24295b735002f6d9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxObject: {fileID: 3388276993977275123, guid: f0343dac73879ad4ab6d25b68a936e61, type: 3}
+  clipCooldown: 0.1
+--- !u!4 &766393597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766393595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.371178, y: -2.6628127, z: -0.03177295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783193057
 GameObject:
   m_ObjectHideFlags: 0
@@ -8331,6 +8377,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  bouncePadLayer:
+    serializedVersion: 2
+    m_Bits: 0
   coyoteTime: 10
   coyoteTimeCounter: 0
   wallCheck: {fileID: 2068389746}
@@ -8348,6 +8397,9 @@ MonoBehaviour:
   isWallBoucning: 0
   heldCoin: 
   collectedCoins: []
+  jumpSound: {fileID: 8300000, guid: ac633b9006bb1e248b9a862c11934187, type: 3}
+  dashSound: {fileID: 8300000, guid: f72b145645795d04fb8942a7c1526fd4, type: 3}
+  bounceSound: {fileID: 8300000, guid: c00847f38c62b334d8df8fa182002ca5, type: 3}
 --- !u!4 &986529292
 Transform:
   m_ObjectHideFlags: 0
@@ -22696,6 +22748,7 @@ MonoBehaviour:
   - {fileID: 2127306612}
   - {fileID: 663131369}
   levelTitle: Level3Coins
+  coinSound: {fileID: 8300000, guid: e22d693373f1310499c49ffbecc18dd5, type: 3}
 --- !u!4 &1637259253
 Transform:
   m_ObjectHideFlags: 0
@@ -31547,9 +31600,10 @@ MonoBehaviour:
   sprite: {fileID: 2123821233}
   outline: {fileID: 584135559}
   particles: {fileID: 1563093716}
-  playerManager: {fileID: 0}
+  playerManager: {fileID: 986529290}
   respawnPos: {x: -64, y: -4}
   coinManager: {fileID: 1637259252}
+  deathSound: {fileID: 8300000, guid: b56f624159c2e8449902f88d04f31f4c, type: 3}
 --- !u!4 &2120610629
 Transform:
   m_ObjectHideFlags: 0
@@ -33001,3 +33055,4 @@ SceneRoots:
   - {fileID: 731413617}
   - {fileID: 1637259253}
   - {fileID: 1910981915}
+  - {fileID: 766393597}
