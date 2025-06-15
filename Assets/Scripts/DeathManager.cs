@@ -18,6 +18,7 @@ public class DeathManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
     private Rigidbody2D rb;
+    [SerializeField]
     private SpriteRenderer sprite;
     [SerializeField]
     private SpriteRenderer outline;
@@ -33,7 +34,7 @@ public class DeathManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite =player.GetComponent<SpriteRenderer>();
+        //sprite =player.GetComponent<SpriteRenderer>();
         rb = player.GetComponent<Rigidbody2D>();
     
     }

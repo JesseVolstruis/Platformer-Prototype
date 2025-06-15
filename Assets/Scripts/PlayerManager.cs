@@ -47,6 +47,7 @@ public class PlayerManager : MonoBehaviour
     private float dashForce = 24f;
     private float dashTime = 0.15f;
     private float dashCD = 0.2f;
+    [SerializeField]
     private SpriteRenderer sprite;
     [SerializeField]
     private GameObject particles;
@@ -62,10 +63,10 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite = gameObject.GetComponent<SpriteRenderer>();
+        //sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
         Time.timeScale = 1;
         coinManager = FindAnyObjectByType<CoinManager>();
-        playerAnimation = GetComponent<Animator>();
+        playerAnimation = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -84,6 +85,7 @@ public class PlayerManager : MonoBehaviour
         }
         else if (IsWalled())
         {
+            playerAnimation.SetBool("Grounded", true);
             coyoteTimeCounter = coyoteTime;
         }
         else
@@ -242,15 +244,14 @@ public class PlayerManager : MonoBehaviour
             coyoteTimeCounter = 0f;
             hasJump = false;
             Invoke(nameof(JumpColor), 0.1f );
-            
+            Invoke(nameof(PlayJumpAnimation), 0.1f);
+
         }
     }
 
     private void JumpColor()
     {
         sprite.color = new Color32(128, 128, 128, 255);
-        playerAnimation.SetTrigger("Jump");
-        playerAnimation.SetBool("Grounded", false);
     }
 
 
@@ -439,6 +440,15 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    void PlayJumpAnimation()
+    {
+        if(!isWallSliding && !IsWalled() && !isWallJumping)
+        {
+            playerAnimation.SetTrigger("Jump");
+        }
+        playerAnimation.SetBool("Grounded", false);
+
+    }
  
 
 
