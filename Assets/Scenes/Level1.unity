@@ -8509,6 +8509,7 @@ MonoBehaviour:
   collectedCoins: []
   jumpSound: {fileID: 8300000, guid: ac633b9006bb1e248b9a862c11934187, type: 3}
   dashSound: {fileID: 8300000, guid: f72b145645795d04fb8942a7c1526fd4, type: 3}
+  WinSound: {fileID: 8300000, guid: 465fffd8678d09d449634701528a9082, type: 3}
 --- !u!61 &493733934
 BoxCollider2D:
   m_ObjectHideFlags: 0

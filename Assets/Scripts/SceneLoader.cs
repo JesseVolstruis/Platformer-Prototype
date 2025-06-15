@@ -24,6 +24,7 @@ public class SceneLoader : MonoBehaviour
     private GameObject level5Object;
     private GameObject winText;
     private GameObject winTextCoin;
+    public AudioClip winSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class SceneLoader : MonoBehaviour
         Time.timeScale = 1;
         //level5Object = GameObject.Find("Level 5");
         //level5Object.transform.localScale = new Vector3(108, 108, 108);
+        winSound = Resources.Load<AudioClip>("Win");
 
     }
 
@@ -88,22 +90,27 @@ public class SceneLoader : MonoBehaviour
         if (PlayerPrefs.GetInt("Level1") == 1)
         {
             textArray[0].GetComponent<TextMeshProUGUI>().color = Color.green;
+            SFXManager.instance.PlayClip(winSound, transform, 0.1f);
         }
         if (PlayerPrefs.GetInt("Level2") == 1)
         {
             textArray[1].GetComponent<TextMeshProUGUI>().color = Color.green;
+            SFXManager.instance.PlayClip(winSound, transform, 0.1f);
         }
         if (PlayerPrefs.GetInt("Level3") == 1)
         {
             textArray[2].GetComponent<TextMeshProUGUI>().color = Color.green;
+            SFXManager.instance.PlayClip(winSound, transform, 0.1f);
         }
         if (PlayerPrefs.GetInt("Level4") == 1)
         {
             textArray[3].GetComponent<TextMeshProUGUI>().color = Color.green;
+            SFXManager.instance.PlayClip(winSound, transform, 0.1f);
         }
         if (PlayerPrefs.GetInt("Level5") == 1)
         {
             textArray[4].GetComponent<TextMeshProUGUI>().color = Color.green;
+            SFXManager.instance.PlayClip(winSound, transform, 0.1f);
             winText = GameObject.Find("Win Text");
             if (winText != null)
             { 
@@ -121,6 +128,7 @@ public class SceneLoader : MonoBehaviour
                 level5Object.transform.localScale = new Vector3(108, 108, 108);
             }
         }
+        
     }
 
     private void OnDisable()

@@ -26,6 +26,8 @@ public class PlayerManager : MonoBehaviour
     private Transform groundCheck;
     [SerializeField]
     private LayerMask groundLayer;
+    [SerializeField]
+    private LayerMask bouncePadLayer;
     private bool isGrounded;
     public float coyoteTime = 10f;
     public float coyoteTimeCounter;
@@ -62,6 +64,8 @@ public class PlayerManager : MonoBehaviour
     private AudioClip jumpSound;
     [SerializeField]
     private AudioClip dashSound;
+    [SerializeField]
+    public AudioClip bounceSound;
 
 
     // Start is called before the first frame update
@@ -276,6 +280,7 @@ public class PlayerManager : MonoBehaviour
 
         
         }
+        
 
     }
 
@@ -480,10 +485,9 @@ public class PlayerManager : MonoBehaviour
         else if(!IsGrounded() && !isWallJumping && !IsWalled())
         {
             SFXManager.instance.PlayClip(jumpSound, transform, 0.3f);
-        }
-        
-        
+        } 
     }
+
 
 
 

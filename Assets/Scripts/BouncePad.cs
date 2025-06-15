@@ -50,6 +50,7 @@ public class BouncePad : MonoBehaviour
             sprite.color = new Color32(255, 255, 255, 255);
             playerManager.hasJump = true;
             playerAnimation.SetBool("Grounded", true);
+            SFXManager.instance.PlaySingleClip(playerManager.bounceSound, playerManager.transform, 0.2f);
             Bounce();
         }
 
@@ -60,6 +61,7 @@ public class BouncePad : MonoBehaviour
             sprite.color = new Color32(255, 255, 255, 255);
             playerManager.hasJump = true;
             playerManager.isWallBoucning = true;
+            SFXManager.instance.PlaySingleClip(playerManager.bounceSound, playerManager.transform, 0.2f);
             WallBounce();
         }
 
@@ -70,6 +72,7 @@ public class BouncePad : MonoBehaviour
             sprite.color = new Color32(255, 255, 255, 255);
             playerManager.hasJump = true;
             playerManager.isWallBoucning = true;
+            SFXManager.instance.PlaySingleClip(playerManager.bounceSound, playerManager.transform, 0.2f);
             WallBounceLeft();
         }
 

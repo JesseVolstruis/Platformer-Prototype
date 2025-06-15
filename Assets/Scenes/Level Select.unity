@@ -4229,6 +4229,7 @@ MonoBehaviour:
   deathCount: {fileID: 0}
   count: 0
   coinCount: 0
+  winSound: {fileID: 8300000, guid: 465fffd8678d09d449634701528a9082, type: 3}
 --- !u!4 &2052316475
 Transform:
   m_ObjectHideFlags: 0
