@@ -201,6 +201,7 @@ public class PlayerManager : MonoBehaviour
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
             sprite.color = new Color32(128, 128, 128, 255);
+            PlayWallJumpAnimation();
 
             if (transform.localScale.x != wallJumpingDirection)
             {
@@ -449,7 +450,13 @@ public class PlayerManager : MonoBehaviour
         playerAnimation.SetBool("Grounded", false);
 
     }
- 
+
+    void PlayWallJumpAnimation()
+    {
+        playerAnimation.SetTrigger("Wall Jump");
+        playerAnimation.SetBool("Grounded", false);
+    }
+
 
 
 

@@ -12,6 +12,9 @@ public class BouncePad : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    private Animator playerAnimation;
+    private GameObject spriteParent;
+    private GameObject spritesParent;
     [SerializeField]
     private Transform bounceCheck;
     [SerializeField]
@@ -30,8 +33,11 @@ public class BouncePad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spriteParent = GameObject.Find("Player Sprite");
         rb = player.GetComponent<Rigidbody2D>();
-        sprite = player.GetComponent<SpriteRenderer>();
+        sprite = spriteParent.GetComponent<SpriteRenderer>();
+        spritesParent = GameObject.Find("Sprites");
+        playerAnimation = spritesParent.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,6 +49,7 @@ public class BouncePad : MonoBehaviour
             playerManager.canDash = true;
             sprite.color = new Color32(255, 255, 255, 255);
             playerManager.hasJump = true;
+            playerAnimation.SetBool("Grounded", true);
             Bounce();
         }
 
