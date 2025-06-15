@@ -8,6 +8,8 @@ public class CoinManager : MonoBehaviour
     public Coin heldCoin;
     public List<Coin> unCollectedCoins;
     public string levelTitle;
+    [SerializeField]
+    public AudioClip coinSound;
     void Start()
     {
         ColorCoins();

@@ -60,6 +60,8 @@ public class PlayerManager : MonoBehaviour
     private Animator playerAnimation;
     [SerializeField]
     private AudioClip jumpSound;
+    [SerializeField]
+    private AudioClip dashSound;
 
 
     // Start is called before the first frame update
@@ -396,6 +398,7 @@ public class PlayerManager : MonoBehaviour
             rb.gravityScale = 0;
             rb.velocity = new Vector2(-1 * dashForce, 0f);
             playerAnimation.SetTrigger("Dash");
+            SFXManager.instance.PlayClip(dashSound, transform, 0.1f);
             yield return new WaitForSeconds(dashTime);
             rb.gravityScale= originalGravity;
             isDashing = false;
@@ -424,6 +427,7 @@ public class PlayerManager : MonoBehaviour
         rb.gravityScale = 0;
         rb.velocity = new Vector2(1 * dashForce, 0f);
         playerAnimation.SetTrigger("Dash");
+        SFXManager.instance.PlayClip(dashSound, transform, 0.1f);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = originalGravity;
         isDashing = false;

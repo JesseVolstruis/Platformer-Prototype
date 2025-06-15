@@ -6613,6 +6613,7 @@ MonoBehaviour:
   - {fileID: 1176435377}
   - {fileID: 1840566817}
   levelTitle: Level1Coins
+  coinSound: {fileID: 8300000, guid: e22d693373f1310499c49ffbecc18dd5, type: 3}
 --- !u!4 &167170918
 Transform:
   m_ObjectHideFlags: 0
@@ -8507,6 +8508,7 @@ MonoBehaviour:
   heldCoin: 
   collectedCoins: []
   jumpSound: {fileID: 8300000, guid: ac633b9006bb1e248b9a862c11934187, type: 3}
+  dashSound: {fileID: 8300000, guid: f72b145645795d04fb8942a7c1526fd4, type: 3}
 --- !u!61 &493733934
 BoxCollider2D:
   m_ObjectHideFlags: 0

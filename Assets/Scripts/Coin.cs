@@ -24,7 +24,12 @@ public class Coin : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             coinManager.heldCoin = this;
+            if (gameObject.transform.localScale != Vector3.zero)
+            {
+                SFXManager.instance.PlayClip(coinManager.coinSound, transform, 0.1f);
+            }
             gameObject.transform.localScale = Vector3.zero;
+
         }
     }
 }

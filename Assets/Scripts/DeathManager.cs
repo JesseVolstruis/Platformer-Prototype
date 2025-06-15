@@ -65,7 +65,7 @@ public class DeathManager : MonoBehaviour
         outline.enabled = false;
         deathCount++;
         onDeath?.Invoke(deathCount);
-        SFXManager.instance.PlayClip(deathSound, playerManager.transform, 0.5f);
+        SFXManager.instance.PlayClip(deathSound, playerManager.transform, 0.3f);
         Vector2 currentPosition = rb.transform.position;
         particles.transform.position = currentPosition;
         particles.Emit(10);
